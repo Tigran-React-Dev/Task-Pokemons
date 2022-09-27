@@ -1,0 +1,118 @@
+@function get-vw($size, $width) {
+  $vw-context: $width * 0.01 * 1px;
+  @return $size / $vw-context * 1vw;
+  @return $size;
+}
+
+$defaultcolor: green;
+
+.pokemonlistcontainer {
+  width: get-vw(1636px, 1920);
+  min-height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: get-vw(122px, 1920);
+
+  .pokemonitem {
+    width: get-vw(1636px, 1920);
+    height: get-vw(80px, 1920);
+    border: 1px solid green;
+    list-style: none;
+    margin-left: get-vw(20px, 1920);
+    margin-top: get-vw(10px, 1920);
+    border-radius: get-vw(10px, 1920);
+    background-color: antiquewhite;
+    font-size: get-vw(24px, 1920);
+    font-family: fantasy;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+.pagescontainer {
+  width: get-vw(1636px, 1920);
+  height: auto;
+  margin-left: get-vw(142px, 1920);
+  margin-top: get-vw(20px, 1920);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  li {
+    list-style: none;
+    width: get-vw(40px, 1920);
+    height: get-vw(30px, 1920);
+    border: get-vw(2px, 1920) solid $defaultcolor;
+    color: black;
+    font-size: get-vw(20px, 1920);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: get-vw(3px, 1920);
+    cursor: pointer;
+    margin-top: get-vw(2px, 1920);
+  }
+}
+.navbar {
+  width: get-vw(1620px, 1920);
+  height: get-vw(100px, 1920);
+  display: flex;
+  margin-left: get-vw(142px, 1920);
+  background-color: $defaultcolor;
+  justify-content: space-between;
+  align-items: center;
+  a {
+    padding: get-vw(15px, 1920) get-vw(20px, 1920);
+    border: get-vw(2px, 1920) solid brown;
+    text-decoration: none;
+    font-size: get-vw(24px, 1920);
+    color: black;
+    margin-right: get-vw(10px, 1920);
+    border-radius: get-vw(10px, 1920);
+  }
+  .searchForm {
+    width: get-vw(1200px, 1920);
+    height: get-vw(100px, 1920);
+    display: flex;
+    margin-left: get-vw(142px, 1920);
+    justify-content: center;
+    align-items: center;
+    input {
+      width: get-vw(400px, 1920);
+      height: get-vw(75px, 1920);
+      border: none;
+      outline: none;
+      background-color: transparent;
+      font-size: get-vw(24px, 1920);
+      font-style: normal;
+      font-family: monospace;
+      font-weight: 400;
+      color: black;
+      border-bottom: get-vw(4px, 1920) solid black;
+      padding: 0 get-vw(10px, 1920);
+    }
+    button {
+      width: get-vw(200px, 1920);
+      height: get-vw(75px, 1920);
+      border-radius: get-vw(10px, 1920);
+      border: none;
+      outline: none;
+      background-color: yellowgreen;
+      color: black;
+      font-size: get-vw(24px, 1920);
+      margin-left: get-vw(10px, 1920);
+      cursor: pointer;
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin-left: get-vw(10px, 1920);
+  li {
+    padding: get-vw(5px, 1920);
+  }
+}
