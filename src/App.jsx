@@ -3,7 +3,7 @@ import SearchBar from "./Components/SearchBar";
 
 function App() {
   return (
-    <div className="App">
+    <div className="Appp">
       <SearchBar />
       <Routes />
     </div>
